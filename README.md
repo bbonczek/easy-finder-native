@@ -1,4 +1,4 @@
-# endless-runners
+# easy-finder-native
 
 ## Configuration
 
