@@ -16,7 +16,7 @@ export default class WelcomeScreen extends Component {
     let login = this.state.loginInputText;
     let password = this.state.passwordInputText;
 
-    if(login == null || password == null){
+    if(login == null || password == null || login == '' || password == ''){
       this.setState({debugLog: "L |& P is: null"});
       return;
     }
