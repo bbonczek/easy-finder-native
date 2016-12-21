@@ -1,0 +1,9 @@
+{
+	"language": "polish",
+
+	"welcome": {
+		"login_example": "Przykład Logowania",
+		"username": "Imię Uzytkownika",
+		"password": "Hasło"
+	}
+}

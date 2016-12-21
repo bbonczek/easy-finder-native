@@ -1,8 +1,9 @@
 {
 	"language": "english",
 
-	"sentence": {
-		"welcome": "welcome",
-		"start": "start"
+	"welcome": {
+		"login_example": "Login Example",
+		"username": "Username",
+		"password": "Password"
 	}
 }
