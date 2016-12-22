@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
+import { Text, View, Image, Button, TextInput, StyleSheet, TouchableHighlight } from 'react-native';
 
 export default class WelcomeScreen extends Component {
   constructor(props){
@@ -44,6 +44,9 @@ export default class WelcomeScreen extends Component {
             value={this.state.passwordInputText}
           />
           <Button title="Log In" onPress={this.login}/>
+          <TouchableHighlight style={styles.button} onPress={this.login}>
+            <Text style={styles.buttonText}> Log In </Text>
+          </TouchableHighlight>
           <Text> {this.state.debugLog} </Text>
         </View>
       );
@@ -65,5 +68,15 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 200,
+  },
+  button: {
+    backgroundColor: '#689DFF',
+    width: 200,
+    height: 30,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize:24,
+    color: 'white'
   }
 });
