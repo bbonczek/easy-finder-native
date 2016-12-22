@@ -12,7 +12,7 @@ export default class MapScreen extends Component {
         <View style={styles.container}>
           <Text> Screen with a map </Text>
 		  <Text> Prosze wrzucic monetę, lub hajs </Text>
-		  <Text> aby kontynuowac xp </Text>
+		  <Text> aby kontynuowac :P </Text>
         </View>
       );
   }
