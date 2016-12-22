@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, Button, TextInput} from 'react-native';
+import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
 
 export default class WelcomeScreen extends Component {
   constructor(props){
@@ -23,12 +23,12 @@ export default class WelcomeScreen extends Component {
 
     let myMsg = "L: " + login + " P: " + password;
     this.setState({debugLog: myMsg});
-
+    this.props.setScreen('map');
   }
 
   render() {
       return (
-        <View >
+        <View style={styles.container}>
           <Image source={this.padlock} />
           <Text> {this.lang.welcome.login_example} </Text>
           <TextInput
@@ -47,3 +47,9 @@ export default class WelcomeScreen extends Component {
       );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+
+  }
+});

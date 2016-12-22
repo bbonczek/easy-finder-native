@@ -1,15 +1,43 @@
 import React, { Component } from 'react';
-import { AppRegistry, View } from 'react-native';
+import { AppRegistry, View, StyleSheet } from 'react-native';
 import WelcomeScreen from './scripts/welcome_screen.js';
+import MapScreen from './scripts/map_screen.js';
 
 export default class easyFinderNative extends Component {
-    render() {
-        return (
-          <View>
-            <WelcomeScreen />
-          </View>
-        );
+  constructor(props) {
+    super(props);
+    this.state = {
+      screen: 'welcome'
     }
+  }
+
+  selectScreen = (screen) => {
+    this.setState({screen: screen});
+  }
+
+  render() {
+    if(this.state.screen === 'welcome'){
+      return (
+        <View style={styles.container}>
+          <WelcomeScreen setScreen={this.selectScreen} />
+        </View>
+      );
+    }
+    else if(this.state.screen === 'map'){
+      return(
+        <View style={styles.container}>
+          <MapScreen />
+        </View>
+      );
+    }
+  }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFE0E0',
+  }
+});
 
 AppRegistry.registerComponent('easyFinderNative', () => easyFinderNative);
