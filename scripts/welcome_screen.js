@@ -30,13 +30,15 @@ export default class WelcomeScreen extends Component {
       return (
         <View style={styles.container}>
           <Image source={this.padlock} />
-          <Text> {this.lang.welcome.login_example} </Text>
+          <Text style={styles.text}> {this.lang.welcome.login_example} </Text>
           <TextInput
+            style={styles.input}
             placeholder={this.lang.welcome.username}
             onChangeText={(loginInputText) => this.setState({loginInputText})}
             value={this.state.loginInputText}
           />
           <TextInput
+            style={styles.input}
             placeholder={this.lang.welcome.password}
             onChangeText={(passwordInputText) => this.setState({passwordInputText})}
             value={this.state.passwordInputText}
@@ -50,6 +52,18 @@ export default class WelcomeScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#FFE0E0',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
 
+  },
+  text: {
+    fontWeight: 'bold',
+    alignSelf: 'flex-start',
+  },
+  input: {
+    width: 200,
   }
 });
