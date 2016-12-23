@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, Button, TextInput, StyleSheet, TouchableHighlight } from 'react-native';
+import { Text, View, Image, Button, TextInput, StyleSheet, TouchableHighlight, Dimensions } from 'react-native';
 
 export default class WelcomeScreen extends Component {
   constructor(props){

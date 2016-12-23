@@ -16,20 +16,20 @@ export default class easyFinderNative extends Component {
   }
 
   render() {
-    if(this.state.screen === 'welcome'){
-      return (
-        <View style={styles.container}>
-          <WelcomeScreen setScreen={this.selectScreen} />
-        </View>
-      );
-    }
-    else if(this.state.screen === 'map'){
+    // if(this.state.screen === 'welcome'){
+    //   return (
+    //     <View style={styles.container}>
+    //       <WelcomeScreen setScreen={this.selectScreen} />
+    //     </View>
+    //   );
+    // }
+    // else if(this.state.screen === 'map'){
       return(
-        <View style={styles.container}>
+        <View style={styles.container2}>
           <MapScreen />
         </View>
       );
-    }
+//    }
   }
 }
 
@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  container2: {
+    flex: 1,
   }
 });
 
